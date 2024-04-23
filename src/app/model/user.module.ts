@@ -1,6 +1,9 @@
+import { Product } from "./product.module";
+
 export interface User {
-  userID: string;
-  username: string;
-  password: string;
-  roles: string[];
+  // userID: string;
+  firstname: string;
+  lastname: string;
+  age: number;
+  // product: Product[];
 }

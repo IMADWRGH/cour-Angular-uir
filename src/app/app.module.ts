@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { UserComponent } from './user/user.component';
-import { ProductComponent } from './product/product.component';
+import { UserComponent } from './home/home/user/user.component';
+import { ProductComponent } from './home/home/product/product.component';
+import { HomeComponent } from './home/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,14 @@ import { ProductComponent } from './product/product.component';
     AppComponent,
     HeaderComponent,
     UserComponent,
-    ProductComponent
+    ProductComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
