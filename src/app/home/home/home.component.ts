@@ -8,7 +8,7 @@ import { User } from 'src/app/model/user.module';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  @Input() data!: Array<User>
+  @Ouput() data!: Array<User>
   userForm!: FormGroup;
   constructor(private fb: FormBuilder) { }
 
@@ -25,3 +25,7 @@ export class HomeComponent {
     console.log(this.data);
   }
 }
+function Ouput(): (target: HomeComponent, propertyKey: "data") => void {
+  throw new Error('Function not implemented.');
+}
+
