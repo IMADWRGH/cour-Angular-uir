@@ -22,7 +22,7 @@ import { TableModule } from 'primeng/table';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    PrimengModule
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
