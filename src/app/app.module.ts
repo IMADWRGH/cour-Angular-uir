@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ListProductComponent } from './list-product/list-product.component';
-import { PrimengModule } from './primeng.module';
-import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -21,8 +19,7 @@ import { TableModule } from 'primeng/table';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    TableModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ import { Product } from '../model/product.module';
   providedIn: 'root'
 })
 export class ProductServiceService {
-  data = [
+  products = [
     {
       id: 1,
       name: 'Bamboo Watch',
@@ -39,7 +39,25 @@ export class ProductServiceService {
   ]
   constructor() { }
 
+  addProduct(product: Product) {
+    this.products.push(product);
+  }
+
   getProducts(): Product[] {
-    return this.data;
+    return this.products;
+  }
+
+  deleteProduct(id: number): Boolean {
+    this.products = this.products.filter((p) => {
+      return p.id !== id;
+    });
+    console.log(this.products);
+
+    return true;
+  }
+
+
+  updateProduct(id: number, p: Product): Product {
+    return this.products[1];
   }
 }

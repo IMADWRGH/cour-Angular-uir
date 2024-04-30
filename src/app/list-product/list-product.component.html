@@ -9,7 +9,9 @@
       <th scope="col">Color</th>
       <th scope="col">Option</th>
       <th>
-        <button type="button" class="btn btn-success">Add new Product</button>
+        <button type="button" class="btn btn-success" (click)="getForm()">
+          Add new Product
+        </button>
       </th>
     </tr>
   </thead>
@@ -21,7 +23,13 @@
       <td>{{ p.description }}</td>
       <td>{{ p.color }}</td>
       <td>
-        <button type="button" class="btn btn-danger mx-4">Delete</button>
+        <button
+          type="button"
+          class="btn btn-danger mx-4"
+          (click)="deleteP(p.id)"
+        >
+          Delete
+        </button>
         <button type="button" class="btn btn-warning">Edit</button>
       </td>
     </tr>
