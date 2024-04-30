@@ -21,7 +21,7 @@ export class FormProductComponent {
   }
   ngOnInit() {
     let EditMode = new Boolean(this.activateRouter.snapshot.paramMap.get("isEditMode"));
-    localStorage.setItem("isEditMode", JSON.stringify(EditMode));
+    // localStorage.setItem("isEditMode", JSON.stringify(EditMode));
     if (EditMode) {
       const name = this.activateRouter.snapshot.paramMap.get("name");
       const price = this.activateRouter.snapshot.paramMap.get("price");
@@ -35,9 +35,9 @@ export class FormProductComponent {
         color: [color, Validators.required]
       });
       this.isEditMode = EditMode.valueOf();
-      console.log(EditMode);
+      // console.log(EditMode);
     }
-    console.log(this.isEditMode);
+    // console.log(this.isEditMode);
   }
 
   onSubmit() {
