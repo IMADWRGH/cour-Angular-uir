@@ -47,6 +47,8 @@
         placeholder="Enter product color"
       />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">
+      {{ isEditMode ? "Edit" : "Submit" }}
+    </button>
   </form>
 </div>

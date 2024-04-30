@@ -6,6 +6,7 @@ import { Product } from '../model/product.module';
   providedIn: 'root'
 })
 export class ProductServiceService {
+  private static id: number;
   products = [
     {
       id: 1,
@@ -35,11 +36,19 @@ export class ProductServiceService {
       price: 65,
       color: 'red'
     },
+    {
+      id: 5,
+      name: 'test',
+      description: 'Product Description',
+      price: 65,
+      color: 'red'
+    },
 
   ]
   constructor() { }
 
   addProduct(product: Product) {
+    product.id = this.products.length + 1
     this.products.push(product);
   }
 
@@ -47,13 +56,11 @@ export class ProductServiceService {
     return this.products;
   }
 
-  deleteProduct(id: number): Boolean {
+  deleteProduct(id: number) {
     this.products = this.products.filter((p) => {
       return p.id !== id;
     });
     console.log(this.products);
-
-    return true;
   }
 
 

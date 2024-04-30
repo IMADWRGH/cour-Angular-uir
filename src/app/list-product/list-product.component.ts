@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ListProductComponent {
 
+
   constructor(private service: ProductServiceService, private router: Router) { }
   products?: Product[];
   ngOnInit() {
@@ -23,7 +24,12 @@ export class ListProductComponent {
   }
   deleteP(id: number) {
     this.service.deleteProduct(id);
+    this.products = this.service.getProducts();
   }
 
+  UpdateProduct(product: Product) {
+    let productObj = { ...product, isEditMode: true }
+    this.router.navigate(['/edit', productObj]);
+  }
 
 }
