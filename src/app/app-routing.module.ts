@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "list", component: ListProductComponent, canActivate: [authGuard] },
   { path: "add", component: FormProductComponent, canActivate: [authGuard] },
-  { path: 'edit', component: FormProductComponent, canActivate: [authGuard] }
+  { path: 'edit', component: FormProductComponent, canActivate: [authGuard] },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
